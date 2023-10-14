@@ -28,6 +28,7 @@ specific language governing permissions and limitations under the License.
 #include "hardware/irq.h"
 #include "hardware/spi.h"
 #include "pico/types.h"
+#include "pico/time.h"
 
 #define SPI_FILL_CHAR (0xFF)
 

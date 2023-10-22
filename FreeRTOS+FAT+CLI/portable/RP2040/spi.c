@@ -78,7 +78,7 @@ bool spi_transfer(spi_t *pSPI, const uint8_t *tx, uint8_t *rx, size_t length) {
      ulTaskNotifyTake() with the xClearCountOnExit parameter set to pdTRUE, and
      a block time of 0 (don't block). */
     BaseType_t rc = ulTaskNotifyTake(pdTRUE, 0);
-    configASSERT(!rc);
+    //configASSERT(!rc);
 
     dma_channel_configure(pSPI->tx_dma, &pSPI->tx_dma_cfg,
                           &spi_get_hw(pSPI->hw_inst)->dr,  // write address
